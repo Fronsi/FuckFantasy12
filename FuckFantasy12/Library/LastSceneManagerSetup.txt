@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Testroom.unity
+- path: Assets/Scenes/TestroomHansen.unity
   isLoaded: 1
   isActive: 1
