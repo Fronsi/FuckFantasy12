@@ -13,13 +13,11 @@ public class MouseController : MonoBehaviour {
     private float xMax = 60.0f;
     private float fRotationX = 0.0f;
 
-	// Use this for initialization
 	void Start ()
     {
         Cursor.lockState = CursorLockMode.Locked; ;
 	}
 	
-	// Update is called once per frame
 	void Update ()
     {
         if (cameraDirection == eRotationAxis.MouseY)
