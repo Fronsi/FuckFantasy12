@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\TestingHansi\Player\MouseController.cs" />
+    <Compile Include="Assets\Scripts\TestingHansi\Player\PlayerAnimation.cs" />
     <Compile Include="Assets\Scripts\TestingHansi\Player\PlayerCharController.cs" />
     <Compile Include="Assets\Scripts\TestingHansi\Player\PlayerInput.cs" />
   </ItemGroup>

@@ -6,8 +6,8 @@ public class MouseController : MonoBehaviour {
 
     public enum eRotationAxis { MouseY, MouseX};
     public eRotationAxis cameraDirection = eRotationAxis.MouseY;
-    public float fRotationSpeedX = 10.0f;
-    public float fRotationSpeedY = 10.0f;
+    public float fRotationSpeedX = 5.0f;
+    public float fRotationSpeedY = 5.0f;
 
     private float xMin = -60.0f;
     private float xMax = 60.0f;
