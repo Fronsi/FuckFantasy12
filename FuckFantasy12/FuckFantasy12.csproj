@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\TestingHansi\Enemys\EnemyAnimatior.cs" />
+    <Compile Include="Assets\Scripts\TestingHansi\Enemys\Skeleton.cs" />
     <Compile Include="Assets\Scripts\TestingHansi\Player\MouseController.cs" />
     <Compile Include="Assets\Scripts\TestingHansi\Player\PlayerAnimation.cs" />
     <Compile Include="Assets\Scripts\TestingHansi\Player\PlayerAttack.cs" />

@@ -4,21 +4,27 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour {
 
-    // Use this for initialization
-    void Start () {
-		
+    public PlayerAttack _playerAttack;
+
+    void Start ()
+    {
+
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (_playerAttack.bIsAttacking)
         {
-            collision.gameObject.SendMessage("GotHit", 1);
+            if (collision.gameObject.tag == "Enemy")
+            {
+                collision.gameObject.SendMessage("GotHit");
+                Debug.Log("Send");
+            }
         }
     }
 }

@@ -8,6 +8,7 @@ public class EnemyAnimatior : MonoBehaviour
     public Animator _enemyAnimator;
     //Timer used for IdleTimer condition in Animator
     public float fIdleTimer = 0.0f;
+    public bool bGotHit = false;
 
     void Start()
     {
@@ -17,6 +18,7 @@ public class EnemyAnimatior : MonoBehaviour
 
     void Update()
     {
+        _enemyAnimator.SetFloat("IdleTimer", fIdleTimer);
         //Idle Animation can only be activated if in "stand" animation
         //
         //If in stand animation check IdleTimer condition with fIdleTimer and count up timer
@@ -37,6 +39,16 @@ public class EnemyAnimatior : MonoBehaviour
             }
         }
 
+        if (bGotHit)
+        {
+            _enemyAnimator.SetBool("GotHit", bGotHit);
+            if (_enemyAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
+            {
+                bGotHit = false;
+                fIdleTimer = 0;
+                _enemyAnimator.SetBool("GotHit", bGotHit);
+            }
+        }
     }
 
 }

@@ -67,8 +67,8 @@ MonoBehaviour:
     y: 30
     width: 1896
     height: 971
-  m_MinSize: {x: 885, y: 342}
-  m_MaxSize: {x: 16010, y: 8042}
+  m_MinSize: {x: 887, y: 342}
+  m_MaxSize: {x: 16012, y: 8042}
   vertical: 0
   controlID: 49
 --- !u!114 &4
@@ -142,13 +142,13 @@ MonoBehaviour:
     height: 303
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 16}
   - {fileID: 14}
   - {fileID: 21}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 2
+  m_LastSelected: 1
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,8 +233,8 @@ MonoBehaviour:
     y: 0
     width: 1619
     height: 971
-  m_MinSize: {x: 608, y: 342}
-  m_MaxSize: {x: 12008, y: 8042}
+  m_MinSize: {x: 610, y: 342}
+  m_MaxSize: {x: 12010, y: 8042}
   vertical: 1
   controlID: 50
 --- !u!114 &11
@@ -258,8 +258,8 @@ MonoBehaviour:
     y: 0
     width: 1619
     height: 668
-  m_MinSize: {x: 608, y: 221}
-  m_MaxSize: {x: 12008, y: 4021}
+  m_MinSize: {x: 610, y: 221}
+  m_MaxSize: {x: 12010, y: 4021}
   vertical: 0
   controlID: 51
 --- !u!114 &12
@@ -349,7 +349,7 @@ MonoBehaviour:
     m_KeySerializationHelper:
     - {fileID: 1107968864650010422, guid: 42daa4fe75776a0468b4776a7885d6f3, type: 2}
     m_ValueSerializationHelper:
-    - {x: 1000.2, y: 189.20001}
+    - {x: 920.2, y: 149.20001}
   m_PreviewAnimator: {fileID: 0}
   m_AnimatorController: {fileID: 9100000, guid: 42daa4fe75776a0468b4776a7885d6f3,
     type: 2}
@@ -431,19 +431,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts/TestingHansi/Enemys
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts/TestingHansi/Enemys
   m_LastFoldersGridSize: -1
   m_LastProjectPath: F:\Programing\FronsiGit\GIT\FuckFantasy12
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 08260000
-    m_LastClickedID: 9736
-    m_ExpandedIDs: 00000000ba2400007225000098250000f825000022260000ffffff7f
+    m_SelectedIDs: 34250000
+    m_LastClickedID: 9524
+    m_ExpandedIDs: 00000000be2400007e250000a4250000042600002e26000042260000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -471,7 +471,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ba2400007225000098250000ae250000f82500002226000036260000
+    m_ExpandedIDs: 00000000be2400007e250000a4250000042600002e260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -496,8 +496,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 9efaffff
-    m_LastClickedInstanceID: -1378
+    m_SelectedInstanceIDs: be260000
+    m_LastClickedInstanceID: 9918
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 102600002aeaffff20deffffe024000000000000ac2400004c2f0000
     m_RenameOverlay:
@@ -587,23 +587,23 @@ MonoBehaviour:
     height: 647
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c6280000
-    m_LastClickedID: 0
-    m_ExpandedIDs: a4faffffaafaffffaefaffffc0faffffc2faffffc6faffffe2faffffe4faffffeafaffffecfafffff0fafffff4fafffff6fafffff8faffff00fbffff04fbffff06fbffff0efbffff12fbffff14fbffff1cfbffffbafbffffe2fbffffe4fbffff00000000
+    m_SelectedIDs: be260000
+    m_LastClickedID: 9918
+    m_ExpandedIDs: aafaffffaefaffffd0faffff2cfbffff72fbffffa0fbffffb6fbffffc8fbffffe2fbffffe4fbffff000000009c260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Bone043
-      m_OriginalName: Bone043
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -1264
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -671,7 +671,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.102834985, y: 0.65975523, z: -0.09184401, w: 0.7387237}
     speed: 2
-    m_Value: {x: 0.102834985, y: 0.65975523, z: -0.09184401, w: 0.7387237}
+    m_Value: {x: 0.10283499, y: 0.65975523, z: -0.091844015, w: 0.7387237}
   m_Size:
     m_Target: 3.773784
     speed: 2
