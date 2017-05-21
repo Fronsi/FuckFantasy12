@@ -11,6 +11,7 @@ public class PlayerCharController : MonoBehaviour
     public float fJumpforce = 5.0f;
     public Vector3 moveDirection = Vector3.zero;
     public CharacterController charController;
+    public bool bIsRunning = false;
 
     void Start()
     {
@@ -21,7 +22,6 @@ public class PlayerCharController : MonoBehaviour
     {
         //add gravity
         moveDirection.y += fGravity * Time.deltaTime;
-
         charController.Move(moveDirection * Time.deltaTime);
     }
 
@@ -33,10 +33,12 @@ public class PlayerCharController : MonoBehaviour
         if (bRun)
         {
             moveDirection *= fRunSpeed;
+            bIsRunning = true;
         }
         else
         {
             moveDirection *= fMovementSpeed;
+            bIsRunning = false;
         }
     }
 

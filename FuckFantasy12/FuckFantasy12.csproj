@@ -81,8 +81,10 @@
     <Compile Include="Assets\Scripts\TestingHansi\Enemys\EnemyAnimatior.cs" />
     <Compile Include="Assets\Scripts\TestingHansi\Player\MouseController.cs" />
     <Compile Include="Assets\Scripts\TestingHansi\Player\PlayerAnimation.cs" />
+    <Compile Include="Assets\Scripts\TestingHansi\Player\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\TestingHansi\Player\PlayerCharController.cs" />
     <Compile Include="Assets\Scripts\TestingHansi\Player\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\TestingHansi\Player\Sword.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
