@@ -6,6 +6,7 @@ public class EnemyAnimatior : MonoBehaviour
 {
 
     public Animator _enemyAnimator;
+    public Skeleton _skeleton;
     //Timer used for IdleTimer condition in Animator
     public float fIdleTimer = 0.0f;
     public bool bGotHit = false;
@@ -13,6 +14,8 @@ public class EnemyAnimatior : MonoBehaviour
     void Start()
     {
         _enemyAnimator = GetComponent<Animator>();
+        _skeleton = GetComponent<Skeleton>();
+        _enemyAnimator.SetFloat("Life", _skeleton.fLife);
     }
 
 
@@ -39,14 +42,21 @@ public class EnemyAnimatior : MonoBehaviour
             }
         }
 
-        if (bGotHit)
+        if (_skeleton.bGotHit)
         {
-            _enemyAnimator.SetBool("GotHit", bGotHit);
-            if (_enemyAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
+            if (_skeleton.fLife > 0.0f)
             {
-                bGotHit = false;
-                fIdleTimer = 0;
-                _enemyAnimator.SetBool("GotHit", bGotHit);
+                _enemyAnimator.SetBool("GotHit", _skeleton.bGotHit);
+                if (_enemyAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
+                {
+                    _skeleton.bGotHit = false;
+                    fIdleTimer = 0;
+                    _enemyAnimator.SetBool("GotHit", _skeleton.bGotHit);
+                }
+            }
+            else
+            {
+                _enemyAnimator.SetFloat("Life", _skeleton.fLife);
             }
         }
     }

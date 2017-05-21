@@ -5,6 +5,8 @@ using UnityEngine;
 public class Skeleton : MonoBehaviour {
 
     public EnemyAnimatior _enemyAnimator;
+    public float fLife = 100.0f;
+    public bool bGotHit = false;
 
 	void Start ()
     {
@@ -13,11 +15,15 @@ public class Skeleton : MonoBehaviour {
 	
 	void Update ()
     {
-		
+        if (fLife <= 0.0f)
+        {
+            GetComponent<Collider>().enabled = false;
+        }
 	}
 
-    public void GotHit()
+    public void GotHit(float dmg)
     {
-        _enemyAnimator.bGotHit = true;
+        fLife -= dmg;
+        bGotHit = true;
     }
 }

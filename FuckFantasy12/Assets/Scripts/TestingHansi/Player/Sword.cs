@@ -22,8 +22,7 @@ public class Sword : MonoBehaviour {
         {
             if (collision.gameObject.tag == "Enemy")
             {
-                collision.gameObject.SendMessage("GotHit");
-                Debug.Log("Send");
+                collision.gameObject.SendMessage("GotHit", 50.0f);
             }
         }
     }
