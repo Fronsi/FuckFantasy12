@@ -2,18 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAnimation : MonoBehaviour {
+public class PlayerAnimation : MonoBehaviour
+{
 
-    public Animator _playerAnimator;
+    private Animation _playerAnimation;
+    private PlayerCharController _playerCharController;
 
-	void Start ()
+    void Start()
     {
-        
-	}
-	
-	void Update ()
+        _playerAnimation = GetComponent<Animation>();
+        _playerCharController = GetComponent<PlayerCharController>();
+    }
+
+    void Update()
     {
-        float move = Input.GetAxis("Vertical");
-        _playerAnimator.SetFloat("Speed", move);
+        if (_playerCharController.moveDirection.z == 0.0f)
+        {
+            _playerAnimation.CrossFade("idle");
+        }
+        else if (_playerCharController.moveDirection.z < 0.0f && _playerCharController.moveDirection.z >= -2.0f
+                || _playerCharController.moveDirection.z > 0.0f && _playerCharController.moveDirection.z <= 2.0f)
+        {
+            _playerAnimation.CrossFade("Walk");
+        }
+        else if (_playerCharController.moveDirection.z < -2.0f || _playerCharController.moveDirection.z > 2.0f)
+        {
+            _playerAnimation.CrossFade("Run");
+        }
     }
 }

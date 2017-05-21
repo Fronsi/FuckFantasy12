@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCharController : MonoBehaviour {
+public class PlayerCharController : MonoBehaviour
+{
 
     public float fGravity = -10.0f;
-    public float fMovementSpeed = 5.0f;
+    public float fMovementSpeed = 2.0f;
+    public float fRunSpeed = 5.0f;
     public float fJumpforce = 5.0f;
-    private Vector3 moveDirection = Vector3.zero;
+    public Vector3 moveDirection = Vector3.zero;
     public CharacterController charController;
 
     void Start()
@@ -23,12 +25,19 @@ public class PlayerCharController : MonoBehaviour {
         charController.Move(moveDirection * Time.deltaTime);
     }
 
-    public void setMoveDirection(float x, float z)
+    public void setMoveDirection(float x, float z, bool bRun)
     {
-            moveDirection = new Vector3(x, 0, z);
-            //transform from local to world space
-            moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= fMovementSpeed;     
+        moveDirection = new Vector3(x, 0, z);
+        //transform from local to world space
+        moveDirection = transform.TransformDirection(moveDirection);
+        if (bRun)
+        {
+            moveDirection *= fRunSpeed;
+        }
+        else
+        {
+            moveDirection *= fMovementSpeed;
+        }
     }
 
     public void jump()

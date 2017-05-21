@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseController : MonoBehaviour {
+public class MouseController : MonoBehaviour
+{
 
-    public enum eRotationAxis { MouseY, MouseX};
+    public enum eRotationAxis { MouseY, MouseX };
     public eRotationAxis cameraDirection = eRotationAxis.MouseY;
     public float fRotationSpeedX = 5.0f;
     public float fRotationSpeedY = 5.0f;
@@ -13,12 +14,12 @@ public class MouseController : MonoBehaviour {
     private float xMax = 60.0f;
     private float fRotationX = 0.0f;
 
-	void Start ()
+    void Start()
     {
         Cursor.lockState = CursorLockMode.Locked; ;
-	}
-	
-	void Update ()
+    }
+
+    void Update()
     {
         if (cameraDirection == eRotationAxis.MouseY)
         {
@@ -30,5 +31,5 @@ public class MouseController : MonoBehaviour {
             fRotationX = Mathf.Clamp(fRotationX, xMin, xMax);
             transform.localEulerAngles = new Vector3(-fRotationX, transform.localEulerAngles.y, 0.0f);
         }
-	}
+    }
 }
