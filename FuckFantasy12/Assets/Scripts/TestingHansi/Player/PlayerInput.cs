@@ -6,10 +6,12 @@ public class PlayerInput : MonoBehaviour
 {
 
     private PlayerCharController _playerCharController;
+    private PlayerAttack _playerAttack;
 
     void Start()
     {
         _playerCharController = GetComponent<PlayerCharController>();
+        _playerAttack = GetComponent<PlayerAttack>();
     }
 
     void Update()
@@ -17,6 +19,7 @@ public class PlayerInput : MonoBehaviour
         //Movement if player is grounded
         if (_playerCharController.charController.isGrounded)
         {
+            //walk
             if (Input.GetButtonDown("Horizontal"))
             {
                 _playerCharController.setMoveDirection(Input.GetAxis("Horizontal"), 0, false);
@@ -33,6 +36,7 @@ public class PlayerInput : MonoBehaviour
             {
                 _playerCharController.setMoveDirection(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), false);
             }
+            //Run
             if (Input.GetKey(KeyCode.LeftShift) && !Input.GetKeyUp(KeyCode.W)
                     || !Input.GetKeyUp(KeyCode.S) && Input.GetKey(KeyCode.LeftShift)
                     || !Input.GetKeyUp(KeyCode.A) && Input.GetKey(KeyCode.LeftShift)
@@ -40,12 +44,16 @@ public class PlayerInput : MonoBehaviour
             {
                 _playerCharController.setMoveDirection(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), true);
             }
-
-
+            //jump
             if (Input.GetButton("Jump"))
             {
                 _playerCharController.jump();
             }
+        }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            _playerAttack.bIsAttacking = true;
         }
     }
 }
